@@ -12,8 +12,7 @@ __all__ = [
 ]
 
 def C(name, default = None):
-  v = _cfg.get(name)
-  return v if v is not None else default
+  return _cfg.get(name, default)
 
 def _load_internal(file_path, force = False):
   if not os.path.isfile(file_path):

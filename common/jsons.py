@@ -22,9 +22,8 @@ def from_txt_file(file_path, sep = "\n", key_sep = None, encoding='utf-8'):
       for d in ds:
         data.append(d)
       return data
-    else:
-      data = {}
-      for d in ds:
-        d = d.split(key_sep)
-        data[d[0]] = d[1]
-      return data
+    data = {}
+    for d in ds:
+      d = d.split(key_sep)
+      data[d[0]] = d[1]
+    return data 

@@ -27,7 +27,7 @@ def run(app):
     except KeyboardInterrupt:
       break
     except:
-      log.warn(sys.exc_info()[0] + ' ' + sys.exc_info()[1])
+      log.error("run with error: ", exc_info=1)
       break
   if hasattr(app, 'cleanup'):
     try:
@@ -35,4 +35,4 @@ def run(app):
     except KeyboardInterrupt:
       pass
     except:
-      log.warn(sys.exc_info()[0] + ' ' + sys.exc_info()[1])
+      log.error("cleanup with error:  ", exc_info=1)
