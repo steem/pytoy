@@ -32,6 +32,10 @@ def all_files_exists(files):
       return False
   return True
 
+def del_file(p):
+  if os.path.isfile(p):
+    os.remove(p)
+
 def all_dirs_exists(dirs):
   for dir in dirs:
     if not os.path.isdir(dir):

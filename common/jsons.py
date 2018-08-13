@@ -1,9 +1,9 @@
 import json
 import os
 
-def from_file(file_path, **kwargs):
+def from_file(file_path, default = None, **kwargs):
   if not os.path.isfile(file_path):
-    return None
+    return default
   with open(file_path, encoding='utf-8') as f:
     return json.load(f, **kwargs)
 
